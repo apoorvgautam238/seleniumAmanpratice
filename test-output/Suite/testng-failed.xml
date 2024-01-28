@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LoginwithValidcredentials(failed)">
+    <groups>
+      <run>
+        <include name="P0"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="seleniumframework.testcases.Logintestcases">
+        <methods>
+          <include name="validcredentialTestcasethree"/>
+          <include name="validcredentialTestcaseOne"/>
+        </methods>
+      </class> <!-- seleniumframework.testcases.Logintestcases -->
+    </classes>
+  </test> <!-- LoginwithValidcredentials(failed) -->
+</suite> <!-- Failed suite [Suite] -->

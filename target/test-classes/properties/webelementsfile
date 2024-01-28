@@ -1,0 +1,4 @@
+usertype_x=//*[@id="ubiusertype1"]
+username_x=//*[@id="ubifname"]
+useremail_x=//*[@id="ubiemail"]
+userpwd_x=//*[@id="ubipass"]
