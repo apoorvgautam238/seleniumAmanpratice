@@ -3,7 +3,9 @@
 
 <suite name="Suite">
 
-  
+  <listeners>
+  <listener class-name="seleniumframework.Listners.Listners"></listener>
+  </listeners>
 
   <test name="LoginwithValidcredentials">       
 <!--   <parameter name="name" value="Apoorv"></parameter>

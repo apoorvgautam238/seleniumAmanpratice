@@ -1,4 +1,0 @@
-INFO    2024-01-29 00:58:54,547 [main] seleniumframework.BasePackage.BaseClass  - Configuration Done
-INFO    2024-01-29 00:59:05,506 [main] seleniumframework.BasePackage.BaseClass  - url:--https://www.magicbricks.com/bricks/User-Registration1
-ERROR   2024-01-29 00:59:05,640 [main] seleniumframework.BasePackage.BaseClass  - java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-INFO    2024-01-29 00:59:05,641 [main] seleniumframework.BasePackage.BaseClass  - validcredentialTestcaseOne

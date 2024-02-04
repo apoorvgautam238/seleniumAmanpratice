@@ -12,6 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeSuite;
 
+import seleniumframework.screenshotscode.Screenshotsfile;
+
+
 public class BaseClass {
 	
 	public static WebDriver driver;
@@ -19,9 +22,12 @@ public class BaseClass {
 	public static Properties webelement=new Properties();
 	public static WebDriverWait wait;
 	public static Logger log=Logger.getLogger(BaseClass.class);//first Step:-create a logger object.
+	public static Screenshotsfile screen;//oops concept:'has a relation'
 	
 	@BeforeSuite(groups ={"P0","P1"})
 	public void setup() throws Exception {
+
+		
 
 		
 		PropertyConfigurator.configure("C:\\Users\\apoorv gautam\\eclipse-workspace\\seleniumframework\\reports\\log4j");//Configure appender 
@@ -29,14 +35,15 @@ public class BaseClass {
 		FileInputStream webele=new FileInputStream("C:\\Users\\apoorv gautam\\eclipse-workspace\\seleniumframework\\src\\test\\resources\\properties\\webelementsfile");
 		config.load(conf);
 		webelement.load(webele);
-		
-	    log.info("Configuration Done");		
-		driver=new ChromeDriver();
+		driver=new ChromeDriver();		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("imp_wait")),TimeUnit.SECONDS);
-		driver.get(config.getProperty("url"));
-		log.info("url:--"+config.getProperty("url"));
+		driver.get(config.getProperty("url"));				
 		wait=new WebDriverWait(driver,Duration.ofSeconds(Integer.parseInt(config.getProperty("exp_wait"))));
+		
+		
+	    
+
 	}
 
 }

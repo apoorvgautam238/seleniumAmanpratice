@@ -9,10 +9,14 @@ import java.lang.reflect.Method;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import seleniumframework.BasePackage.BaseClass;
+import seleniumframework.screenshotscode.Screenshotsfile;
 
 public class Logintestcases extends BaseClass {
 
@@ -21,30 +25,27 @@ public class Logintestcases extends BaseClass {
 	public void validcredentialTestcaseOne(Method m) {
 		
 		
-		try {
+		
        driver.findElement(By.xpath(webelement.getProperty("usertype_x`"))).click();
        log.info("usertype click");
 		driver.findElement(By.xpath(webelement.getProperty("username_x"))).sendKeys("Apoorv");
 		driver.findElement(By.xpath("//*[@id=\"ubimobile1\"]")).sendKeys("6264321345");
 		driver.findElement(By.xpath("//*[@id=\"signUp\"]/div/div[11]/button")).click();
-		throw new FileNotFoundException();
-		}catch (Exception e) {
-          log.error(e);
-          log.info(m.getName());
-          
-		}
+		String ele=driver.findElement(By.xpath("//*[@id=\"signUp\"]/div/div[11]/button")).getText();
+		Assert.assertEquals(ele, "fcvbjkufagaghaug");
 	}
 
 //	@Parameters({"name","mobile"}) 
     @Test(groups="P1",priority = 1)
     
 //	public void validcredentialTestcasetwo(String name,String mobile)---using fir parameter
-	public void validcredentialTestcasetwo(){
+	public void validcredentialTestcasetwo() throws Exception{
 		
 		driver.findElement(By.xpath(webelement.getProperty("usertype_x"))).click();
 		driver.findElement(By.xpath(webelement.getProperty("username_x"))).sendKeys("Apoorv");
 		driver.findElement(By.xpath("//*[@id=\"ubimobile1\"]")).sendKeys("6264321345");
 		driver.findElement(By.xpath("//*[@id=\"signUp\"]/div/div[11]/button")).click();		
+		
 	}
 
     @Test(groups="P0",priority = 0)
