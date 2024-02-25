@@ -1,12 +1,12 @@
-package seleniumframework.Listners;
+package seleniumframework.ExtentReporter;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
-import org.testng.ITestNGListener;
 import org.testng.ITestResult;
+
 import seleniumframework.screenshotscode.Screenshotsfile;
 
-public class Listners implements ITestListener{
+public class GenrateExtentreports implements ITestListener {
 	
 	
 	 public void onTestStart(ITestResult result) {
@@ -45,8 +45,7 @@ public class Listners implements ITestListener{
 	  public  void onFinish(ITestContext context) {
 
 	  }
-
-
 	
 	
+
 }

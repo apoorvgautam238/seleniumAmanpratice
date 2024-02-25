@@ -1,7 +1,4 @@
 package seleniumframework.testcases;
-
-
-
 import static org.testng.Assert.assertThrows;
 
 import java.io.FileNotFoundException;
